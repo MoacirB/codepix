@@ -15,10 +15,6 @@ type PixKeyRepositoryInterface interface{
 	FindAccount(id string)(*Account, error)
 }
 
-func init() {
-	govalidator.SetFieldsRequiredByDefault(true)
-}
-
 type PixKey struct{
 	Base      `valid:"required"`
 	Kind      string   `json:"kind" gorm:"type:varchar(20)" valid:"notnull"`
@@ -57,7 +53,7 @@ func NewPixKey(kind string, account *Account, key string) (*PixKey, error) {
 	pixKey.CreatedAt = time.Now();
 
 	//Validação
-	err := pixKey.isValid();
+	err := account.isValid();
 	if err != nil {return nil, err}
 
 	return &pixKey, nil;
