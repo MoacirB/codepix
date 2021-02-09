@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 package model_test
 
 import (
@@ -25,6 +24,8 @@ func TestModel_NewAccount(t *testing.T) {
 	_, err = model.NewAccount(bank, "", ownerName)
 	require.NotNil(t, err)
 =======
+=======
+>>>>>>> 3a9907998b9e846343bed63daaab47c0499eda5c
 package model_test
 
 import (
@@ -52,5 +53,8 @@ func TestModel_NewAccount(t *testing.T) {
 
 	_, err = model.NewAccount(bank, "", ownerName)
 	require.NotNil(t, err)
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> 3a9907998b9e846343bed63daaab47c0499eda5c
 }
